@@ -52,7 +52,7 @@ module.exports = {
       method: "shell.enter",
       params: {
         id: "shell",
-        message: "\n" 
+        message: "\n\n" 
       }
     },
   ]
