@@ -2,8 +2,8 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "diamond",
-  description: "",
-  icon: "icon.png",
+  description: "Diffusion for World Modeling https://diamond-wm.github.io/",
+  icon: "icon.gif",
   menu: async (kernel, info) => {
     let installed = info.exists("app/env")
     let running = {
@@ -57,10 +57,19 @@ module.exports = {
         }]
       } else {
         return [{
-          default: true,
           icon: "fa-solid fa-power-off",
-          text: "Start",
+          text: "Start Counter Strike",
           href: "start.js",
+          params: {
+            branch: "csgo"
+          }
+        }, {
+          icon: "fa-solid fa-power-off",
+          text: "Start Atari",
+          href: "start.js",
+          params: {
+            branch: "main"
+          }
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
